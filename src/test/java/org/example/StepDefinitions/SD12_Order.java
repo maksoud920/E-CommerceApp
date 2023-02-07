@@ -42,12 +42,12 @@ public class SD12_Order {
 
     @And("User add billing address details and press Continue button")
     public void AddAddressDetails() throws InterruptedException {
-        Select selectCountry = new Select(Hooks.driver.findElement(By.id("BillingNewAddress_CountryId")));
+        Select selectCountry = new Select(Checkout.Country());
         selectCountry.selectByVisibleText("Egypt");
-        Hooks.driver.findElement(By.id("BillingNewAddress_City")).sendKeys("Assiut");
-        Hooks.driver.findElement(By.id("BillingNewAddress_Address1")).sendKeys("Assiut");
-        Hooks.driver.findElement(By.id("BillingNewAddress_ZipPostalCode")).sendKeys("71111");
-        Hooks.driver.findElement(By.id("BillingNewAddress_PhoneNumber")).sendKeys("01012345678");
+        Checkout.City().sendKeys("Assiut");
+        Checkout.Address().sendKeys("Assiut");
+        Checkout.ZipCode().sendKeys("71111");
+        Checkout.PhoneNumber().sendKeys("01012345678");
 
 
         Checkout.AddressContinueButton().click();

@@ -42,5 +42,41 @@ public class P09_Checkout {
         return confirmButtonEle;
     }
 
+    public WebElement Country()
+    {
+        By country = By.id("BillingNewAddress_CountryId");
+        WebElement countryEle= Hooks.driver.findElement(country);
+        return countryEle;
+    }
+
+    public WebElement City()
+    {
+        By city = By.id("BillingNewAddress_City");
+        WebElement cityEle= Hooks.driver.findElement(city);
+        return cityEle;
+    }
+
+    public WebElement Address()
+    {
+        By address = By.id("BillingNewAddress_Address1");
+        WebElement addressEle= Hooks.driver.findElement(address);
+        return addressEle;
+    }
+
+    public WebElement ZipCode()
+    {
+        By zipCode = By.id("BillingNewAddress_ZipPostalCode");
+        WebElement zipCodeEle= Hooks.driver.findElement(zipCode);
+        return zipCodeEle;
+    }
+
+    public WebElement PhoneNumber()
+    {
+        By phoneNumber = By.id("BillingNewAddress_PhoneNumber");
+        WebElement phoneNumberEle= Hooks.driver.findElement(phoneNumber);
+        return phoneNumberEle;
+    }
+
+
 
 }
