@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="352.82">
+<testcase classname="F01_Register | users could register with new accounts" name="User could register with valid data" time="16.337">
+<system-out><![CDATA[Given User go to register page..............................................passed
+When User enter first name, second name, email and password.................passed
+And User press on register button...........................................passed
+Then User could register successfully.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could reset his/her password successfully" name="User reset his/her password using email" time="17.11">
+<system-out><![CDATA[Given User go to login page.................................................passed
+And User press on forgot password...........................................passed
+When User enters his or her email...........................................passed
+And User press Recover button...............................................passed
+Then User could reset password successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="user could user could search using product name" time="17.256">
+<failure message="The following asserts failed:&#10;&#9;Error Message: Search for book failed expected [true] but found [false],&#10;&#9;Error Message: Search for book failed expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When User search for "book".................................................passed
+And User click on search button.............................................passed
+Then Website should show search results.....................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	Error Message: Search for book failed expected [true] but found [false],
+	Error Message: Search for book failed expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.StepDefinitions.SD04_Search.SuccessSearch(SD04_Search.java:56)
+	at ✽.Website should show search results(file:///E:/Courses/Software%20Testing/Software%20Testing%20Udacity/Professional/Automation%20Project/E-Commerce/src/main/resources/features/SC04_Search.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="User could search for any product" name="user could user could search using product name 2" time="18.59">
+<system-out><![CDATA[When User search for "laptop"...............................................passed
+And User click on search button.............................................passed
+Then Website should show search results.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="user could user could search using product name 3" time="24.206">
+<system-out><![CDATA[When User search for "nike".................................................passed
+And User click on search button.............................................passed
+Then Website should show search results.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could switch between currencies US-Euro" name="User could switch from USD to Euro" time="13.176">
+<system-out><![CDATA[When User change currency from the drop down list...........................passed
+Then Currencies should be displayed in the selected currency................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could select different Categories" name="User select random category" time="21.451">
+<system-out><![CDATA[When User hover over a random category......................................passed
+And User select random sub-category.........................................passed
+Then sub-category should be displayed.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could filter with color" name="User filter shoes with color" time="30.839">
+<system-out><![CDATA[Given User click on shoes subcategory.......................................passed
+When User filter color by Red...............................................passed
+Then Red items should be displayed..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could select different tags" name="User select random tag" time="39.242">
+<system-out><![CDATA[Given User click on a random category.......................................passed
+When User click on a random tag.............................................passed
+Then Products with this tag should be displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add different products to Shopping cart" name="User add three books to the Shopping cart" time="26.824">
+<system-out><![CDATA[Given User open books category page.........................................passed
+When User press on Add To Cart button on three different books..............passed
+Then Items should be added to the Shopping cart.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add different products to Wishlist" name="User add three books to the Wishlist" time="23.844">
+<system-out><![CDATA[Given User open books category page.........................................passed
+When User press on add to Wishlist button on three different books..........passed
+Then Items should be added to the Wishlist..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add different products to compare list" name="User add three books to Compare list" time="22.623">
+<system-out><![CDATA[Given User open books category page.........................................passed
+When User press on add to compare list button on three different books......passed
+Then Items should be added to compare list..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can order successfully" name="User Create successful Order" time="41.53">
+<system-out><![CDATA[Given User go to login page.................................................passed
+And User enter valid email and password.....................................passed
+And User click on login button..............................................passed
+When User press on Add To Cart button on an item............................passed
+And User Open Shopping Cart.................................................passed
+And User click on agree to terms checkbox...................................passed
+And User click on Checkout button...........................................passed
+And User add billing address details and press Continue button..............passed
+And User select shipping method and press Continue button...................passed
+And User select Payment method and press Continue button....................passed
+And User press on Continue button in Payment information tab................passed
+And User press on Confirm button............................................passed
+Then Order should be created successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should be able to login to the system" name="User login with valid email and password" time="17.721">
+<system-out><![CDATA[Given User go to login page.................................................passed
+When User enter valid email and password....................................passed
+And User click on login button..............................................passed
+Then User could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should be able to login to the system" name="User can't login with invalid email or invalid password" time="21.758">
+<system-out><![CDATA[Given User go to login page.................................................passed
+When User enter invalid email or password...................................passed
+And User click on login button..............................................passed
+Then User couldn't login to the system......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
